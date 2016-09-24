@@ -1,0 +1,26 @@
+{
+  "name": "ch.io",
+  "version": "1.0.0",
+  "description": "Changi Airport Hackathon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cjx3711/ch.io.git"
+  },
+  "keywords": [
+    "ai",
+    "airport"
+  ],
+  "author": "ch.io",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cjx3711/ch.io/issues"
+  },
+  "homepage": "https://github.com/cjx3711/ch.io#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

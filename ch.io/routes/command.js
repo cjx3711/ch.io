@@ -7,9 +7,13 @@
  var router = express.Router();
 
  /* GET users listing. */
+ router.get('/', function(req, res, next) {
+   // res.send('respond with a resource');
+   res.json({message: req.param});
+ });
  router.post('/', function(req, res, next) {
    // res.send('respond with a resource');
-   res.json({message: "Server side message"});
+   res.json({body: req.body.data });
  });
 
  module.exports = router;

@@ -1,6 +1,7 @@
 # CH.IO
 
 **To start**
+
 1. clone the repo
 1. `npm install`
 1. Run the app

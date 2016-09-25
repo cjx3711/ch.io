@@ -3,6 +3,7 @@ app.config( function($routeProvider) {
       templateUrl : "templates/home.html",
       controller: "homeController"
   })
+
   $routeProvider.when("/directory", {
       templateUrl : "templates/directory.html",
       controller: "directoryController"

@@ -25,6 +25,7 @@
     <![endif]-->
   </head>
 
+
   <body ng-app="ChioApp" class="bg" ng-class="{'bg-dark': dark, 'bg-light': !dark}">
 
     <ng-view></ng-view>
@@ -42,19 +43,24 @@
     <script src="javascripts/bootstrap.min.js"></script>
     <script src="javascripts/angular.min.js"></script>
     <script src="javascripts/angular-route.js"></script>
+    <script src="javascripts/three.min.js"></script>
     <script src="javascripts/angular-animate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
 
     <script>
-      var app = angular.module('ChioApp', ['ngRoute', 'ngAnimate']);
+      var app = angular.module('ChioApp', ['ngRoute', 'ngAnimate', 'chioHeartViewer']);
     </script>
     <script src="angular/app.js"></script>
     <script src="angular/service/data.js"></script>
     <script src="angular/controllers/home.js"></script>
+    <script src="angular/directives/chioHeartViewer.js"></script>
+
+
     <script src="angular/controllers/ops.js"></script>
     <script src="angular/controllers/dev.js"></script>
     <script src="angular/controllers/itinerary.js"></script>
+
 
     <!-- <script src="js/service/data.js"></script>
     <script src="js/scripts.js"></script>

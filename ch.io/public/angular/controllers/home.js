@@ -21,6 +21,4 @@ app.controller('homeController', ['$scope', '$rootScope', 'dataService', '$timeo
 	        $location.url('/itinerary');
   }
 
-
-
 }]);

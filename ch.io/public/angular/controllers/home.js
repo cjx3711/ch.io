@@ -14,10 +14,13 @@ app.controller('homeController', ['$scope', '$rootScope', 'dataService', '$timeo
     if (input == "i" || input == "I") {
         $scope.customerInput = "I have 5 hours. What can I do?";
     }
-    $timeout(function () {
-        $location.url('/itinerary');
-    }, 1000);
   }
+
+  $scope.enterKey = function(keyEvent) {
+    if (keyEvent.which === 13)
+	        $location.url('/itinerary');
+  }
+
 
 
 }]);

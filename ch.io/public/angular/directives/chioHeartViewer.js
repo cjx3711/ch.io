@@ -20,13 +20,14 @@ angular.module("chioHeartViewer", [])
 					function init() {
 
 						camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 10000 );
-						camera.position.z = 90;
+						camera.position.z = 70;
 						scene = new THREE.Scene();
 						scene.add(camera)
+						// renderer = new THREE.WebGLRenderer()
 						renderer = new THREE.WebGLRenderer({ alpha: true })
 					    // renderer.setClearColor(0x333333)
 						renderer.setPixelRatio( window.devicePixelRatio );
-						renderer.setSize(window.innerWidth, window.innerHeight);
+						// renderer.setSize(window.innerWidth, window.innerHeight);
 						// container = angular.element('#container1');                                         
 					    // container.append(renderer.domElement);
 						elem[0].appendChild(renderer.domElement);
@@ -37,6 +38,8 @@ angular.module("chioHeartViewer", [])
 					    var PI2 = Math.PI * 2;
 
 					    var texture = new THREE.ImageUtils.loadTexture( "../assets/circle.png" );
+
+					    onWindowResize();
 
 					   //  geometry = new THREE.SphereGeometry(15,80,20,0,2*Math.PI,Math.PI,Math.PI/2)
 
@@ -172,8 +175,16 @@ angular.module("chioHeartViewer", [])
 
 					//
 					function onWindowResize(event) {
-						renderer.setSize(window.innerWidth, window.innerHeight);
-						camera.aspect = window.innerWidth / window.innerHeight;
+
+						var width = $(".brain").width();
+						var aspect = 16 / 4;
+						if ( window.innerWidth < 1000 ) {
+							aspect = 16 / 5;
+						}if ( window.innerWidth < 700 ) {
+							aspect = 16 / 6;
+						}
+						renderer.setSize(width, width / aspect);
+						camera.aspect = aspect;
 						camera.updateProjectionMatrix();
 					}
 
@@ -213,13 +224,13 @@ angular.module("chioHeartViewer", [])
 						if (increase) {
 						    time = Date.now() * 0.00007;
 						    i = 0;
-						    console.log("increasing")
+						    // console.log("increasing")
 						    // console.log(Date.now())
 						    
 						    
 						    while (i < scene.children.length) {
 						      var object = scene.children[i];
-						      console.log(i)
+						      // console.log(i)
 						      if (object instanceof THREE.Points) {
 						      	if (i == 2)  {
 						      		object.rotation.y = time * (i + 1);
@@ -233,7 +244,7 @@ angular.module("chioHeartViewer", [])
 					        	  if (object.scale.x > (parameters[i][0] - 0.005)) {
 							          object.scale.x = object.scale.y = object.scale.z  -= 0.0004
 							      }
-						           console.log(scaleval);
+						           // console.log(scaleval);
 						        }
 						      }
 						      i++;

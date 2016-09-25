@@ -9,10 +9,14 @@
     <title>Testing</title>
 
     <!-- <link rel="stylesheet" href="lib/css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <link rel="stylesheet" href="stylesheets/bootstrap.css">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheets/theme.css">
+    <link rel="stylesheet" href="stylesheets/chartist.min.css">
+    <link rel="stylesheet" href="stylesheets/animations.css">
+
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -21,19 +25,31 @@
     <![endif]-->
   </head>
 
-  <body ng-app="ChioApp" class="full">
+
+  <body ng-app="ChioApp" class="bg" ng-class="{'bg-dark': dark, 'bg-light': !dark}">
 
     <ng-view></ng-view>
 
+    <div class="footer-pad">
+    </div>
+    </div>
+    <footer>
+      <a href="/#/"><img class="corner-logo" src="../assets/logo.png"/></a>
+    </footer>
+
     <!-- <script src="https://cdn.jsdelivr.net/g/lodash@4.16.1(lodash.min.js+lodash.core.min.js)"></script> -->
+    <script src="javascripts/chartist.min.js"></script>
     <script src="javascripts/jquery-3.1.0.min.js"></script>
     <script src="javascripts/bootstrap.min.js"></script>
     <script src="javascripts/angular.min.js"></script>
     <script src="javascripts/angular-route.js"></script>
     <script src="javascripts/three.min.js"></script>
+    <script src="javascripts/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
 
     <script>
-      var app = angular.module('ChioApp', ['ngRoute', "chioHeartViewer"]);
+      var app = angular.module('ChioApp', ['ngRoute', 'ngAnimate', 'chioHeartViewer']);
     </script>
     <script src="angular/app.js"></script>
     <script src="angular/service/data.js"></script>
@@ -41,8 +57,14 @@
     <script src="angular/directives/chioHeartViewer.js"></script>
 
 
+    <script src="angular/controllers/ops.js"></script>
+    <script src="angular/controllers/dev.js"></script>
+    <script src="angular/controllers/itinerary.js"></script>
+
+
     <!-- <script src="js/service/data.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/directives/sidebar.js"></script> -->
   </body>
+
 </html>

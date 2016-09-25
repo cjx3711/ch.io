@@ -13,6 +13,32 @@ app.service('dataService', [ '$http', function($http) {
     );
   }
 
+  this.getHeatmapData = function() {
+    return $http.get("http://projects.chaijiaxun.com/changihack2016")
+  }
+
+  this.setHeatmap = function() {
+    $http.get("http://projects.chaijiaxun.com/changihack2016/?b1=1").then(
+      function successCallback(response) {
+        console.log("Server response", response.data);
+      },
+      function errorCallback(response) {
+        console.log("Server error", response);
+      }
+    );
+  }
+  this.unsetHeatmap = function() {
+    $http.get("http://projects.chaijiaxun.com/changihack2016/?b1=0").then(
+      function successCallback(response) {
+        console.log("Server response", response.data);
+      },
+      function errorCallback(response) {
+        console.log("Server error", response);
+      }
+    );
+  }
+
+
   this.attractions = [];
   this.attractions.push({
     id: 0,

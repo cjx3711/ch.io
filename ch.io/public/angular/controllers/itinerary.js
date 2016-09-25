@@ -1,6 +1,14 @@
 app.controller('itineraryController', ['$scope', '$rootScope', 'dataService', function ($scope, $rootScope, dataService) {
   $rootScope.dark = false;
   $scope.container = Array();
+  $scope.loaded = false;
+  setTimeout(function() {
+    $scope.$apply(function() {
+      $scope.loaded = true;
+    });
+    console.log("Done");
+  }, 2000);
+
   var i1 = [
     {
       type: 'start'
@@ -190,4 +198,6 @@ app.controller('itineraryController', ['$scope', '$rootScope', 'dataService', fu
   $scope.container.push(i2);
   $scope.container.push(i3);
   $scope.parts = $scope.container[0];
+
+
 }]);

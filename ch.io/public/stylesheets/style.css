@@ -90,6 +90,20 @@ div.abs-btm-right {
   right:0px;
 }
 
+div.abs-btm-right-2 {
+  position:fixed;
+  top:50%;
+  right:20px;
+}
+
+div.abs-btm-right-2 .chio-btn {
+  border-radius: 50%;
+  height:50px;
+  width:50px;
+  padding: 0px 0px;
+  margin: 0px 0px;
+}
+
 @media (max-width:736px) {
   div.abs-top-right {
     display:block;

@@ -52,12 +52,15 @@ app.controller('itineraryController', ['$scope', '$rootScope', 'dataService', fu
       type: 'line'
     },
     {
-      type: 'food',
+      type: 'attraction',
       img: 'https://placehold.it/400x300',
       name: 'Bengawan Solo',
       time: "15 minutes",
       timeperiod: "6:00 PM - 6:15 PM",
       location: "Terminal 1, Terminal 2, Terminal 3"
+    },
+    {
+      type: 'line'
     },
     {
       type: 'end'
@@ -120,6 +123,9 @@ app.controller('itineraryController', ['$scope', '$rootScope', 'dataService', fu
       location: "Terminal 1, Terminal 2, Terminal 3"
     },
     {
+      type: 'line'
+    },
+    {
       type: 'end'
     },
   ];
@@ -139,7 +145,7 @@ app.controller('itineraryController', ['$scope', '$rootScope', 'dataService', fu
       type: 'line'
     },
     {
-      type: 'retail',
+      type: 'attraction',
       img: 'https://placehold.it/400x300',
       name: 'Cosmetics and Perfume',
       time: "45 minutes",
@@ -157,7 +163,7 @@ app.controller('itineraryController', ['$scope', '$rootScope', 'dataService', fu
       type: 'line'
     },
     {
-      type: 'food',
+      type: 'attraction',
       img: 'https://placehold.it/400x300',
       name: '4 Fingers Crispy Chicken',
       time: "40 minutes",
@@ -183,11 +189,20 @@ app.controller('itineraryController', ['$scope', '$rootScope', 'dataService', fu
       location: "Terminal 2, Terminal 3"
     },
     {
+      type: 'line'
+    },
+    {
       type: 'end'
     },
   ];
   $scope.container.push(i1);
   $scope.container.push(i2);
   $scope.container.push(i3);
-  $scope.parts = $scope.container[0];
+  $scope.i = 0;
+  $scope.parts = $scope.container[$scope.i];
+  $scope.cycleItinerary = function() {
+    $scope.i++;
+    $scope.parts = $scope.container[$scope.i%3];
+  };
+
 }]);

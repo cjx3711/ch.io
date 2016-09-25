@@ -82,19 +82,20 @@ div.vline {
 .customer-input-group {
 	position: relative;
 	left: -32px;
+  min-width: 370px
 }
 
 .customer-input-box {
 	background: rgba(255,255,255,0.2);
     border-radius: 4px;
     margin-left: -20px;
-    padding-left: 100px;
-	font-family: 'Raleway', sans-serif;
+    padding-left: 10%;
+	  font-family: 'Raleway', sans-serif;
     color: white;
     width: 95%;
     left: -50px;
     font-size: 20px;
-	display: inline-block;
+	  display: inline-block;
     height: 50px;
 }
 
@@ -106,9 +107,9 @@ div.vline {
 }
 
 .brain {
-	padding: 20px;
+	padding: 10px;
 	margin: auto;
-	width: 300px;
+	width: 200px;
 }
 
 .corner-logo {

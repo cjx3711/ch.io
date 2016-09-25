@@ -8,7 +8,7 @@
     <!--<button class="btn btn-default form-control" ng-click="submitData()" >Submit</button>-->
   </div>
   <div class="customer-input-group">
-    <input ng-model="customerInput" type="text" class="form-control customer-input-box" placeholder="Say 'Food' or 'I have 3 hours' or 'Maps'"/>
+    <input ng-model="customerInput" ng-change="updateInput(customerInput)" type="text" class="form-control customer-input-box" placeholder="Say 'Food' or 'I have 3 hours' or 'Maps'"/>
     <img class="img-responsive mic" ng-src="{{micimg}}"/>
   </div>
 </div>

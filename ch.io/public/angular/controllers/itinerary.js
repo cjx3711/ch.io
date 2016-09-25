@@ -25,7 +25,7 @@ app.controller('itineraryController', ['$scope', '$rootScope', 'dataService', fu
     },
     {
       type: 'attraction',
-      img: 'https://placehold.it/400x300',
+      img: '../assets/butterfly-garden.png',
       name: 'Butterfly Garden',
       time: "1 hour",
       timeperiod: "3:00 PM - 4:00 PM",
@@ -43,7 +43,7 @@ app.controller('itineraryController', ['$scope', '$rootScope', 'dataService', fu
     },
     {
       type: 'attraction',
-      img: 'https://placehold.it/400x300',
+      img: '../assets/rooftop-jacuzzi.png',
       name: 'Rooftop Swimming Pool and Jacuzzi',
       time: "1.5 hours",
       timeperiod: "4:20 PM - 5:50 PM",
@@ -61,7 +61,7 @@ app.controller('itineraryController', ['$scope', '$rootScope', 'dataService', fu
     },
     {
       type: 'attraction',
-      img: 'https://placehold.it/400x300',
+      img: '../assets/bengawan.png',
       name: 'Bengawan Solo',
       time: "15 minutes",
       timeperiod: "6:00 PM - 6:15 PM",
@@ -91,7 +91,7 @@ app.controller('itineraryController', ['$scope', '$rootScope', 'dataService', fu
     },
     {
       type: 'attraction',
-      img: 'https://placehold.it/400x300',
+      img: '../assets/social-tree.png',
       name: 'Social Tree',
       time: "15 minutes",
       timeperiod: "3:00 PM - 3:15 PM",
@@ -109,7 +109,7 @@ app.controller('itineraryController', ['$scope', '$rootScope', 'dataService', fu
     },
     {
       type: 'attraction',
-      img: 'https://placehold.it/400x300',
+      img: '../assets/sunflower-garden.png',
       name: 'Sunflower Garden',
       time: "1 hour",
       timeperiod: "3:27 PM - 4:27 PM",
@@ -123,8 +123,11 @@ app.controller('itineraryController', ['$scope', '$rootScope', 'dataService', fu
       time: "15 min"
     },
     {
-      type: 'retail',
-      img: 'https://placehold.it/400x300',
+      type: 'line'
+    },
+    {
+      type: 'attraction',
+      img: '../assets/burberry.png',
       name: 'Burberry',
       time: "30 minutes",
       timeperiod: "4:42 PM - 5:12 PM",
@@ -154,7 +157,7 @@ app.controller('itineraryController', ['$scope', '$rootScope', 'dataService', fu
     },
     {
       type: 'attraction',
-      img: 'https://placehold.it/400x300',
+      img: '../assets/cosmetics.png',
       name: 'Cosmetics and Perfume',
       time: "45 minutes",
       timeperiod: "11:00 AM - 11:45 AM",
@@ -172,7 +175,7 @@ app.controller('itineraryController', ['$scope', '$rootScope', 'dataService', fu
     },
     {
       type: 'attraction',
-      img: 'https://placehold.it/400x300',
+      img: '../assets/4fcc.png',
       name: '4 Fingers Crispy Chicken',
       time: "40 minutes",
       timeperiod: "11:55 AM - 12:35 PM",
@@ -190,7 +193,7 @@ app.controller('itineraryController', ['$scope', '$rootScope', 'dataService', fu
     },
     {
       type: 'attraction',
-      img: 'https://placehold.it/400x300',
+      img: '../assets/singapore-tour.png',
       name: 'Free Singapore Tour',
       time: "120 minutes",
       timeperiod: "12:50 PM - 14:50 PM",

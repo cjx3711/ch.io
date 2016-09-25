@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
   background: none;
 }
 
@@ -152,4 +152,72 @@ div.walk {
 .chio-btn:hover {
   color: #9888a9;
   border: 3px solid #913fb3;
+}
+/* OPS PAGE */
+h1.ops {
+  font-size: 1.8em;
+  margin-bottom: 0.2em;
+}
+h2.ops {
+  font-size: 1.8em;
+  font-weight: 200;
+  margin-top: 0.2em;
+}
+
+#toast-container {
+  font-size: 24px;
+}
+
+#toast-container>div {
+  width: 500px
+}
+
+/* HOME PAGE */
+.home-header {
+	text-align: center;
+}
+
+.home-header h1{
+	color: white;
+	font-weight: 100;
+}
+
+.customer-input-group {
+	position: relative;
+	left: -32px;
+  min-width: 370px
+}
+
+.customer-input-box {
+	background: rgba(255,255,255,0.2);
+    border-radius: 4px;
+    margin-left: -20px;
+    padding-left: 10%;
+	  font-family: 'Raleway', sans-serif;
+    color: white;
+    width: 95%;
+    left: -50px;
+    font-size: 20px;
+	  display: inline-block;
+    height: 50px;
+}
+
+.mic {
+	margin-left: 10px;
+	display: inline-block;
+	width: 20px;
+	margin-top: -5px;
+}
+
+.brain {
+	padding: 10px;
+	margin: auto;
+	width: 200px;
+}
+
+.corner-logo {
+	width: 100px;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
 }

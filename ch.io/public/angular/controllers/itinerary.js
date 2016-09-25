@@ -1,4 +1,6 @@
-app.controller('itineraryController', ['$scope', 'dataService', function ($scope, dataService) {
+app.controller('itineraryController', ['$scope', '$rootScope', 'dataService', function ($scope, $rootScope, dataService) {
+  $rootScope.dark = false;
+
   $scope.parts = [
     {
       type: 'start'

@@ -1,8 +1,10 @@
 <div class="container">
   <div class="positioned">
+    
     <div class="abs-top-right">
       You have <strong>4</strong> hours at the Airport.
     </div>
+
     <div class="row" ng-repeat="part in parts">
       <div ng-if="part.type == 'start'" class="start col-xs-12">
         <div class="start-circle pull-left"> </div>
@@ -58,5 +60,12 @@
         </p>
       </div>
     </div>
+    
+    <div class="abs-btm-right">
+      <a class="btn chio-btn">
+        Save to Phone
+      </a>
+    </div>
+
   </div>
 </div>

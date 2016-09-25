@@ -84,6 +84,11 @@ div.abs-top-right {
   color: #292929;
 }
 
+div.abs-btm-right {
+  position:absolute;
+  bottom:0px;
+  right:0px;
+}
 
 @media (max-width:736px) {
   div.abs-top-right {
@@ -135,4 +140,16 @@ div.image {
 
 div.walk {
   font-size:1.2em;
+}
+
+.chio-btn {
+  color: #6b5f77;
+  border: 3px solid #441d54;
+  padding: 0.5em 2em;
+  font-size:1.1em;
+}
+
+.chio-btn:hover {
+  color: #9888a9;
+  border: 3px solid #913fb3;
 }

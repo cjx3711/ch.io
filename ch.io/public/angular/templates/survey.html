@@ -1,7 +1,7 @@
 <div>
   <h1>{{question}}</h1>
-  <button class="btn btn-primary" ng-repeat="option in options">{{option}}</button>
-  <button class="btn btn-primary" ng-hide="isFirstQuestion" ng-click="prevQuestion()">Back</button>
+  <button class="btn btn-primary" ng-repeat="option in options" ng-click="nextQuestion(option)">{{option}}</button>
+  <!--<button class="btn btn-primary" ng-hide="isFirstQuestion" ng-click="prevQuestion()">Back</button>-->
   <button class="btn btn-primary" ng-hide="isLastQuestion" ng-click="nextQuestion()">Next</button>
 
 </div>

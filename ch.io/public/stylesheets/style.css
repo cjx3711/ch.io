@@ -8,6 +8,10 @@ a {
   color: #00B7FF;
 }
 
+.positioned {
+  position:relative;
+}
+
 .flex {
   display: flex;
 }
@@ -29,19 +33,19 @@ div.start-circle {
   margin-left: 10px;
 	width: 20px;
 	height: 20px;
-  background: black;
+  background: #441d54;
 }
 div.end-circle {
 	border-radius: 50%;
   margin-left: 10px;
 	width: 20px;
 	height: 20px;
-  background: black;
+  background: #441d54;
 }
 
 span.line {
   height: 1px;
-  background: black;
+  background: #384452;
   width: 100%;
   display:block;
   margin-top: 10px;
@@ -70,6 +74,85 @@ div.vline {
   background-size: cover;
 }
 
+div.abs-top-right {
+  position:absolute;
+  font-size: 2em;
+  font-weight: 200;
+  font-family: Raleway, sans-serif;
+  top: 0;
+  right: 0;
+  color: #292929;
+}
+
+div.abs-btm-right {
+  position:absolute;
+  bottom:0px;
+  right:0px;
+}
+
+@media (max-width:736px) {
+  div.abs-top-right {
+    display:block;
+    position: relative;
+    top:0;
+    right:0;
+    text-align: center;
+    margin-bottom:12px;
+  }
+}
+@media (min-width:737px) {
+  div.description {
+    padding-top:1.1em;
+  }
+}
+
+.icon-wrapper {
+  float:left;
+  width:32px;
+}
+
+.icon-h {
+  width:20px;
+  max-height:20px;
+}
+
+.icon-v {
+  max-width:20px;
+  height:20px;
+}
+
+.icon-clock {
+  position: relative;
+  left:-3px;
+}
+
+div.att-header {
+  font-weight:900;
+  font-size:1em;
+}
+div.description {
+  font-size:1.3em;
+}
+
+div.image {
+  float:left;
+}
+
+div.walk {
+  font-size:1.2em;
+}
+
+.chio-btn {
+  color: #6b5f77;
+  border: 3px solid #441d54;
+  padding: 0.5em 2em;
+  font-size:1.1em;
+}
+
+.chio-btn:hover {
+  color: #9888a9;
+  border: 3px solid #913fb3;
+}
 /* OPS PAGE */
 h1.ops {
   font-size: 1.8em;

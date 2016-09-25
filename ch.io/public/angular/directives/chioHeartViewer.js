@@ -205,72 +205,59 @@ angular.module("chioHeartViewer", [])
 					};
 											global_time = Date.now()
 
-					inter = setInterval(anim, 700);
+					// interval_time = 
+					inter = setInterval(toggle, 100);
 
-					var increase = true;
+					var state = 1;
 
 					function toggle() {
-						global_time = Date.now()
-						if (increase) {
-							increase = false;
+						if ( state == 12) {
+							state = 1;
 						} else {
-							increase = true;
+							state++;
 						}
 					}
 
 					function animate() {
 						requestAnimationFrame( animate );
 						var scaleval = Math.min(0.0002, (0.0002+ (0.00005/(Date.now() - global_time + 1))));
-						if (increase) {
-						    time = Date.now() * 0.00007;
-						    i = 0;
-						    // console.log("increasing")
-						    // console.log(Date.now())
-						    
-						    
-						    while (i < scene.children.length) {
-						      var object = scene.children[i];
-						      // console.log(i)
-						      if (object instanceof THREE.Points) {
-						      	if (i == 2)  {
-						      		object.rotation.y = time * (i + 1);
-						      		object.rotation.x = time * (i + 2);
-						      	} else if(i == 0){
-						      		object.rotation.y = time * -(i + 2);
-						      		object.rotation.x = time * -(i + 1);
-						      	}
-						        else {
-					        	  object.rotation.y = time * -(i + 0.1);
-					        	  if (object.scale.x > (parameters[i][0] - 0.005)) {
+					    time = Date.now() * 0.00007;
+					    i = 0;
+					    // console.log("increasing")
+					    // console.log(Date.now())
+					    
+					    
+					    while (i < scene.children.length) {
+					      var object = scene.children[i];
+					      // console.log(i)
+					      if (object instanceof THREE.Points) {
+					      	if (i == 2)  {
+					      		object.rotation.y = time * (i + 1);
+					      		object.rotation.x = time * (i + 2);
+					      	} else if(i == 0 || i == 3){
+					      		object.rotation.y = time * -(i + 2);
+					      		object.rotation.x = time * -(i + 1);
+					      	}
+					        else {
+				        	  object.rotation.y = time * -(i + 0.1);
+
+
+				        	  if (state == 1 || state == 3) {
+					        	  if (object.scale.x < (parameters[i][0] + 0.005)) {
+							          object.scale.x = object.scale.y = object.scale.z  += 0.0004
+							      }
+							  } else if (state == 2 || state == 4) {
+					        	  if (object.scale.x > parameters[i][0]) {
 							          object.scale.x = object.scale.y = object.scale.z  -= 0.0004
 							      }
-						           // console.log(scaleval);
-						        }
-						      }
-						      i++;
-						    }
-						} else {
-							// console.log("decreasing")
-							// time = Date.now() * 0.00007;
-						 //    i = 0;
-						    
-						 //    while (i < scene.children.length) {
-						 //      var object = scene.children[i];
-						 //      if (object instanceof THREE.Points) {
-						 //      	if (i == 2)  {
-						 //      		object.rotation.y = time * (i + 1);
-						 //      		object.rotation.x = time * (i + 2);
+							  } 
 
-						 //      	}
-						 //        else {
-						 //        	object.rotation.y = time * -(i + 0.1);
-						 //          // object.scale.x = object.scale.y = object.scale.z  -= scaleval;
-						 //        }
-						 //      }
-						 //      i++;
-						 //    }
-
-						 }
+				           // console.log(scaleval);
+					        }
+					      }
+					      i++;
+					    }
+						
 					    // bpm
 
 						render();

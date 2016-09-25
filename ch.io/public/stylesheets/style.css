@@ -8,6 +8,10 @@ a {
   color: #00B7FF;
 }
 
+.positioned {
+  position:relative;
+}
+
 .flex {
   display: flex;
 }
@@ -29,14 +33,14 @@ div.start-circle {
   margin-left: 10px;
 	width: 20px;
 	height: 20px;
-  background: black;
+  background: #441d54;
 }
 div.end-circle {
 	border-radius: 50%;
   margin-left: 10px;
 	width: 20px;
 	height: 20px;
-  background: black;
+  background: #441d54;
 }
 
 span.line {
@@ -68,4 +72,60 @@ div.vline {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+div.abs-top-right {
+  position:absolute;
+  font-size: 2em;
+  font-weight: 200;
+  font-family: Raleway, sans-serif;
+  top: 0;
+  right: 0;
+  color: #292929;
+}
+
+
+@media (max-width:736px) {
+  div.abs-top-right {
+    display:block;
+    position: relative;
+    top:0;
+    right:0;
+    text-align: center;
+    margin-bottom:12px;
+  }
+}
+@media (min-width:737px) {
+  div.description {
+    padding-top:20px;
+  }
+}
+
+.icon-wrapper {
+  float:left;
+  width:32px;
+}
+
+.icon-h {
+  width:20px;
+  max-height:20px;
+}
+
+.icon-v {
+  max-width:20px;
+  height:20px;
+}
+
+.icon-clock {
+  position: relative;
+  left:-2px;
+}
+
+div.att-header {
+  font-weight:900;
+  font-size:1.2em;
+}
+
+div.image {
+  float:left;
 }

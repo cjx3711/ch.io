@@ -1,46 +1,62 @@
 <div class="container">
-  <div class="row" ng-repeat="part in parts">
-    <div ng-if="part.type == 'start'" class="start col-xs-12">
-      <div class="start-circle pull-left"> </div>
-      <div class="pull-left pad-left">
-        Start
-      </div>
+  <div class="positioned">
+    <div class="abs-top-right">
+      You have <strong>4</strong> hours at the Airport.
     </div>
-    <div ng-if="part.type == 'end'" class="start col-xs-12">
-      <div class="end-circle pull-left"> </div>
-      <div class="pull-left pad-left">
-        End
-      </div>
-    </div>
-    <div ng-if="part.type == 'line'" class="line col-xs-12">
-      <div class="vline">
-      </div>
-    </div>
-    <div ng-if="part.type == 'walk'" class="walk col-xs-12">
-      {{part.time}} walk
-    </div>
-    <div ng-if="part.type == 'train'" class="walk col-xs-12">
-      {{part.time}} train
-    </div>
-    <div ng-if="part.type == 'attraction'" class="image col-xs-12 col-sm-3 col-md-2">
-      <img class="img-responsive" ng-src="{{part.img}}"/>
-    </div>
-    <div ng-if="part.type == 'attraction'" class="description col-xs-12 col-sm-9 col-md-10">
-      <div class="flex">
-        <div>
-          {{part.name}}
-        </div>
-        <div class="grow hidden-xs">
-          <span class="line"></span>
+    <div class="row" ng-repeat="part in parts">
+      <div ng-if="part.type == 'start'" class="start col-xs-12">
+        <div class="start-circle pull-left"> </div>
+        <div class="pull-left pad-left">
+          Start
         </div>
       </div>
-      <p>
-        {{part.time}}
-      </p>
-      <p>
-        {{part.location}}
-      </p>
+      <div ng-if="part.type == 'end'" class="start col-xs-12">
+        <div class="end-circle pull-left"> </div>
+        <div class="pull-left pad-left">
+          End
+        </div>
+      </div>
+      <div ng-if="part.type == 'line'" class="line col-xs-12">
+        <div class="vline">
+        </div>
+      </div>
+      <div ng-if="part.type == 'walk'" class="walk col-xs-12">
+        {{part.time}} <img class="icon-v" src="../assets/walk.png" />
+      </div>
+      <div ng-if="part.type == 'train'" class="walk col-xs-12">
+        {{part.time}} <img class="icon-h" src="../assets/train.png" />
+      </div>
+      <div ng-if="part.type == 'attraction'" class="image col-xs-12 col-sm-4 col-md-3">
+        <img class="img-responsive" ng-src="{{part.img}}"/>
+      </div>
+      <div ng-if="part.type == 'attraction'" class="description col-xs-12 col-sm-8 col-md-9">
+        <div class="flex">
+          <div class="att-header">
+            {{part.name}}
+          </div>
+          <div class="grow hidden-xs">
+            <span class="line"></span>
+          </div>
+        </div>
+        <p>
+          <span class="icon-wrapper">
+            <img class="icon-v" src="../assets/location.png" />
+          </span>
+          <span>{{part.location}}</span>
+        </p>
+        <p>
+          <span class="icon-wrapper">
+            <img class="icon-v" src="../assets/hourglass.png" />
+          </span>
+          {{part.time}}
+        </p>
+        <p>
+          <span class="icon-wrapper">
+            <img class="icon-h icon-clock" src="../assets/clock.png" /> 
+          </span>
+          {{part.timeperiod}}
+        </p>
+      </div>
     </div>
   </div>
-
 </div>

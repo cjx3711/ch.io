@@ -69,3 +69,21 @@ div.vline {
   -o-background-size: cover;
   background-size: cover;
 }
+
+h1.ops {
+  font-size: 1.8em;
+  margin-bottom: 0.2em;
+}
+h2.ops {
+  font-size: 1.8em;
+  font-weight: 200;
+  margin-top: 0.2em;
+}
+
+#toast-container {
+  font-size: 24px;
+}
+
+#toast-container>div {
+  width: 500px
+}

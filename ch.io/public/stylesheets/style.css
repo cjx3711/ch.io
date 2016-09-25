@@ -45,7 +45,7 @@ div.end-circle {
 
 span.line {
   height: 1px;
-  background: black;
+  background: #384452;
   width: 100%;
   display:block;
   margin-top: 10px;
@@ -97,7 +97,7 @@ div.abs-top-right {
 }
 @media (min-width:737px) {
   div.description {
-    padding-top:20px;
+    padding-top:1.1em;
   }
 }
 
@@ -118,14 +118,21 @@ div.abs-top-right {
 
 .icon-clock {
   position: relative;
-  left:-2px;
+  left:-3px;
 }
 
 div.att-header {
   font-weight:900;
-  font-size:1.2em;
+  font-size:1em;
+}
+div.description {
+  font-size:1.3em;
 }
 
 div.image {
   float:left;
+}
+
+div.walk {
+  font-size:1.2em;
 }

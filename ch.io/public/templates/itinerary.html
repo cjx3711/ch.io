@@ -1,8 +1,14 @@
 <div class="container">
   <div class="positioned">
 
-    <div class="abs-top-right">
-      You have <strong>4</strong> hours at the Airport.
+  <div class="spinner" ng-hide="loaded">
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+  </div>
+  <div class="positioned fade" ng-show="loaded">
+
+    <div class="abs-top-right" >
+      You have <strong>5</strong> hours at the Airport.
     </div>
 
     <div class="row" ng-repeat="part in parts">

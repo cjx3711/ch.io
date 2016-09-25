@@ -102,6 +102,8 @@ div.abs-btm-right-2 .chio-btn {
   width:50px;
   padding: 0px 0px;
   margin: 0px 0px;
+  padding-top: 5px;
+    font-size: 24px;
 }
 
 @media (max-width:736px) {
@@ -194,6 +196,7 @@ h2.ops {
 .home-header h1{
 	color: white;
 	font-weight: 100;
+  margin: 50px 0 85px;
 }
 
 .customer-input-group {
@@ -204,16 +207,17 @@ h2.ops {
 
 .customer-input-box {
 	background: rgba(255,255,255,0.2);
-    border-radius: 4px;
-    margin-left: -20px;
-    padding-left: 10%;
-	  font-family: 'Raleway', sans-serif;
-    color: white;
-    width: 95%;
-    left: -50px;
-    font-size: 20px;
-	  display: inline-block;
-    height: 50px;
+  border-radius: 4px;
+  margin-left: -20px;
+  padding-left: 10%;
+  margin-top:85px;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  width: 95%;
+  left: -50px;
+  font-size: 20px;
+  display: inline-block;
+  height: 50px;
 }
 
 .mic {
@@ -227,6 +231,45 @@ h2.ops {
 	padding: 10px;
 	margin: auto;
 	width: 200px;
+}
+
+.fade {
+    transition: all linear 500ms;
+    opacity: 1;
+}
+
+.fade.ng-hide {
+  opacity: 0;
+}
+
+.fade.ng-hide-remove,
+.fade.ng-hide-add {
+  display: block !important;
+}
+
+.fade.ng-hide-remove {
+  transition: all linear 1000ms;
+}
+
+.fade.ng-hide-add {
+  transition: all linear 500ms;
+}
+
+.toast-bottom-right {
+  bottom: 75px;
+}
+/* FOOTER STUFF */
+div.footer-pad {
+  height: 150px;
+  width:100%;
+}
+footer {
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  height:67px;
+  background:#441D54;
 }
 
 .corner-logo {

@@ -39,24 +39,51 @@ app.controller('opsController', ['$scope', 'dataService', function ($scope, data
   }
 
 
-  $scope.show1 = false;
-  $scope.show2 = false;
-  $scope.show3 = false;
-  $scope.show4 = false;
+/* Set some base options (settings will override the default settings in Chartist.js *see default settings*). We are adding a basic label interpolation function for the xAxis labels. */
+var options = {
+  axisX: {
+    labelInterpolationFnc: function(value) {
+      return value + 'pm';
+    }
+  }
+};
 
-  setTimeout(function() {
-    $scope.show1 = true;
-    setTimeout(function() {
-      $scope.show2 = true;
-      setTimeout(function() {
-        $scope.show3 = true;
-        setTimeout(function() {
-          $scope.show4 = true;
-        }, 200);
-      }, 200);
-    }, 200);
-  }, 200);
+/* Now we can specify multiple responsive settings that will override the base settings based on order and if the media queries match. In this example we are changing the visibility of dots and lines as well as use different label interpolations for space reasons. */
+var responsiveOptions = [
+  ['screen and (min-width: 800px) and (max-width: 1024px)', {
+    showPoint: false,
+    axisX: {
+      labelInterpolationFnc: function(value) {
+        return value;
+      }
+    }
+  }],
+  ['screen and (max-width: 800px)', {
+    showLine: false,
+    axisX: {
+      labelInterpolationFnc: function(value) {
+        return value;
+      }
+    }
+  }]
+];
 
-
+for ( var i = 0; i < 3; i++ ) {
+  var series = [];
+  for ( var j = 0; j < 6; j++ ) {
+    series.push(Math.round(Math.random() * 10))
+  }
+  /* Add a basic data series with six labels and values */
+  var data = {
+    labels: ['1', '2', '3', '4', '5', '6'],
+    series: [
+      {
+        data: series
+      }
+    ]
+  };
+  /* Initialize the chart with the above settings */
+  new Chartist.Line('#chart'+(i+1), data, options, responsiveOptions);
+}
 
 }]);

@@ -19,4 +19,17 @@ app.config( function($routeProvider) {
       templateUrl : "templates/dev.html",
       controller: "devController"
   })
+  $routeProvider.when("/itinerary", {
+      templateUrl : "templates/itinerary.html",
+      controller: "itineraryController"
+  })
+});
+
+app.config(function($provide) {
+    $provide.decorator('ngViewDirective', function($delegate) {
+        var directive = $delegate[0];
+        directive.replace = true;
+
+        return $delegate;
+    });
 });

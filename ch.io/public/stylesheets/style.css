@@ -1,8 +1,71 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: none;
 }
 
 a {
   color: #00B7FF;
+}
+
+.flex {
+  display: flex;
+}
+.shrink {
+  flex-shrink: 1;
+}
+.grow {
+  flex-grow: 1;
+}
+.pad-left {
+  padding-left: 10px;
+}
+.marg-left {
+  margin-left: 10px;
+}
+
+div.start-circle {
+	border-radius: 50%;
+  margin-left: 10px;
+	width: 20px;
+	height: 20px;
+  background: black;
+}
+div.end-circle {
+	border-radius: 50%;
+  margin-left: 10px;
+	width: 20px;
+	height: 20px;
+  background: black;
+}
+
+span.line {
+  height: 1px;
+  background: black;
+  width: 100%;
+  display:block;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+div.vline {
+  height: 20px;
+  width: 1px;
+  background: black;
+  display: block;
+  margin: 0 0 0 20px;
+}
+
+.bg-dark {
+  background: url('../assets/bg-dark.png') no-repeat center center fixed;
+}
+
+.bg-light {
+  background: url('../assets/bg-light.png') no-repeat center center fixed;
+}
+.bg {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

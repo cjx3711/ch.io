@@ -1,6 +1,52 @@
 <div class="container-fluid">
-  <div class="col-lg-8 col-lg-offset-2 col-md-12">
-    <img class="img-responsive" src="http://placehold.it/1920x1080"/>
+
+  <div class="col-lg-8 col-lg-offset-2 col-md-12" style="position:relative;">
+    <div class="circle red animation-target"
+          style="width:40px; height:40px; opacity:0.5; position:absolute; top:72%; left:59%">
+      <div class="circle redder animation-target-2"
+            style="width:20px;height:20px;left: 10px;top: 10px;position: absolute;">
+      </div>
+    </div>
+    <div class="circle red animation-target"
+          style="width:60px; height:60px; opacity:0.3; position:absolute; top:73%; left:42%">
+      <div class="circle redder animation-target-2"
+            style="width:40px;height:40px;left: 10px;top: 10px;position: absolute;">
+      </div>
+    </div>
+    <div class="circle red animation-target"
+          style="width:60px; height:60px; opacity:0.5; position:absolute; top:20%; left:40%">
+      <div class="circle redder animation-target-2"
+            style="width:40px;height:40px;left: 10px;top: 10px;position: absolute;">
+        <div class="circle redderer animation-target-3"
+              style="width:20px;height:20px;left:10px;top:10px;position:absolute;">
+        </div>
+      </div>
+    </div>
+
+    <div class="circle red animation-target"
+          style="width:80px; height:80px; opacity:0.5; position:absolute; top:30%; left:58%">
+      <div class="circle redder animation-target-2"
+            style="width:70px;height:70px;left:5px;top:5px;position:absolute;">
+        <div class="circle redderer animation-target-3"
+              style="width:60px;height:60px;left:5px;top:5px;position:absolute;">
+          <div class="circle reddest animation-target"
+                style="width:40px;height:40px;left:10px;top:10px;position:absolute;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="circle yellow animation-target" ng-show="heatmap"
+          style="width:60px; height:60px; opacity:0.5; position:absolute; top:10%; left:80%">
+      <div class="circle yellower animation-target-2"
+            style="width:40px;height:40px;left: 10px;top: 10px;position: absolute;">
+        <div class="circle yellowest animation-target-3"
+              style="width:20px;height:20px;left:10px;top:10px;position:absolute;">
+        </div>
+      </div>
+    </div>
+
+    <img class="img-responsive" src="assets/opsmap.png"/>
+
   </div>
-  <h1>{{ heatmap ? "Updated heatmap" : "Original heatmap" }}</h1>
 </>

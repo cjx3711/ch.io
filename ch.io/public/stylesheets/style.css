@@ -88,7 +88,7 @@ div.vline {
 	background: rgba(255,255,255,0.2);
     border-radius: 4px;
     margin-left: -20px;
-    padding-left: 20px;
+    padding-left: 100px;
 	font-family: 'Raleway', sans-serif;
     color: white;
     width: 95%;
@@ -109,4 +109,11 @@ div.vline {
 	padding: 20px;
 	margin: auto;
 	width: 300px;
+}
+
+.corner-logo {
+	width: 100px;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
 }

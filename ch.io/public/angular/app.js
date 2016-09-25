@@ -19,4 +19,8 @@ app.config( function($routeProvider) {
       templateUrl : "templates/dev.html",
       controller: "devController"
   })
+  $routeProvider.when("/itinerary", {
+      templateUrl : "templates/itinerary.html",
+      controller: "itineraryController"
+  })
 });

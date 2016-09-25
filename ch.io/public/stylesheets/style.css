@@ -6,3 +6,23 @@ body {
 a {
   color: #00B7FF;
 }
+
+.flex {
+  display: flex;
+}
+.shrink {
+  flex-shrink: 1;
+}
+.grow {
+  flex-grow: 1;
+}
+
+
+span.line {
+  height: 1px;
+  background: black;
+  width: 100%;
+  display:block;
+  margin-top: 10px;
+  margin-left: 10px;
+}

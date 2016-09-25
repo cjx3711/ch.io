@@ -1,6 +1,15 @@
 <div class="full">
   <div class="col-xs-12">
-    <input ng-model="customerInput" type="text" class="form-control" placeholder="Input your command"/>
-    <button class="btn btn-default form-control" ng-click="submitData()" >Submit</button>
+    <div class="home-header"><h1>What can I help you with?</h1></div>
+    <div class="brain">
+      <img class="img-responsive brain" ng-src="{{brainimg}}"/>
+    </div>
+    
+    <!--<button class="btn btn-default form-control" ng-click="submitData()" >Submit</button>-->
+  </div>
+  <div class="customer-input-group">
+    <input ng-model="customerInput" type="text" class="form-control customer-input-box" placeholder="Say 'Food' or 'I have 3 hours' or 'Maps'"/>
+    <img class="img-responsive mic" ng-src="{{micimg}}"/>
   </div>
 </div>
+

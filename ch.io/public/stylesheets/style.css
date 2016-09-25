@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
   background: none;
 }
 
@@ -68,4 +68,45 @@ div.vline {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.home-header {
+	text-align: center;
+}
+
+.home-header h1{
+	color: white;
+	font-weight: 100;
+}
+
+.customer-input-group {
+	position: relative;
+	left: -32px;
+}
+
+.customer-input-box {
+	background: rgba(255,255,255,0.2);
+    border-radius: 4px;
+    margin-left: -20px;
+    padding-left: 20px;
+	font-family: 'Raleway', sans-serif;
+    color: white;
+    width: 95%;
+    left: -50px;
+    font-size: 20px;
+	display: inline-block;
+    height: 50px;
+}
+
+.mic {
+	margin-left: 10px;
+	display: inline-block;
+	width: 20px;
+	margin-top: -5px;
+}
+
+.brain {
+	padding: 20px;
+	margin: auto;
+	width: 300px;
 }

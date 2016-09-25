@@ -24,3 +24,12 @@ app.config( function($routeProvider) {
       controller: "itineraryController"
   })
 });
+
+app.config(function($provide) {
+    $provide.decorator('ngViewDirective', function($delegate) {
+        var directive = $delegate[0];
+        directive.replace = true;
+
+        return $delegate;
+    });
+});

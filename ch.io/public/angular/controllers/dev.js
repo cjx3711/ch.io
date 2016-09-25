@@ -1,4 +1,5 @@
-app.controller('devController', ['$scope', 'dataService', function ($scope, dataService) {
+app.controller('devController', ['$scope', '$rootScope', 'dataService', function ($scope, $rootScope, dataService) {
+  $rootScope.dark = false;
   $scope.setHeatmap = function() {
     dataService.setHeatmap(true);
   }

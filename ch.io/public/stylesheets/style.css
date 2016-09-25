@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: none;
 }
 
 a {
@@ -53,4 +54,18 @@ div.vline {
   background: black;
   display: block;
   margin: 0 0 0 20px;
+}
+
+.bg-dark {
+  background: url('../assets/bg-dark.png') no-repeat center center fixed;
+}
+
+.bg-light {
+  background: url('../assets/bg-light.png') no-repeat center center fixed;
+}
+.bg {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

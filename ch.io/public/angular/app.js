@@ -4,7 +4,3 @@ app.config( function($routeProvider) {
       controller: "homeController"
   })
 });
-
-app.controller('homeController', function ($scope) {
-
-});

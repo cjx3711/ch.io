@@ -24,7 +24,7 @@ app.controller('itineraryController', ['$scope', 'dataService', function ($scope
       type: 'line'
     },
     {
-      type: 'walk',
+      type: 'train',
       time: "12 min"
     },
     {

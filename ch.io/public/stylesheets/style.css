@@ -16,7 +16,27 @@ a {
 .grow {
   flex-grow: 1;
 }
+.pad-left {
+  padding-left: 10px;
+}
+.marg-left {
+  margin-left: 10px;
+}
 
+div.start-circle {
+	border-radius: 50%;
+  margin-left: 10px;
+	width: 20px;
+	height: 20px;
+  background: black;
+}
+div.end-circle {
+	border-radius: 50%;
+  margin-left: 10px;
+	width: 20px;
+	height: 20px;
+  background: black;
+}
 
 span.line {
   height: 1px;
@@ -25,4 +45,12 @@ span.line {
   display:block;
   margin-top: 10px;
   margin-left: 10px;
+}
+
+div.vline {
+  height: 20px;
+  width: 1px;
+  background: black;
+  display: block;
+  margin: 0 0 0 20px;
 }

@@ -9,16 +9,24 @@ app.controller('homeController', ['$scope', '$rootScope', 'dataService', '$timeo
     dataService.sendRawTextInput($scope.customerInput);
   }
 
-  $scope.updateInput = function(input) {
-    console.log(input);
-    if (input == "i" || input == "I") {
-        $scope.customerInput = "I have 5 hours. What can I do?";
+  var input = $(".customer-input-box");
+  var text = "I have 5 hours. What can I do?";
+  var cursor = 0;
+  var currentText = "";
+  input.keydown(function(e) {
+    if ( e.which == 13 ) {
+      input.val(text);
+      window.location.href = "/#/itinerary";
     }
-  }
+    if ( e.which == 8 ) {
+      currentText = input.val();
+      cursor = currentText.length;
+    } else {
+      e.preventDefault();
+      cursor++;
+      currentText = text.substring(0,cursor);
+      input.val(currentText);
 
-  $scope.enterKey = function(keyEvent) {
-    if (keyEvent.which === 13)
-	        $location.url('/itinerary');
-  }
-
+    }
+  });
 }]);

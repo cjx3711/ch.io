@@ -1,13 +1,16 @@
-app.controller('opsController', ['$scope', 'dataService', function ($scope, dataService) {
+app.controller('opsController', ['$scope', '$rootScope', 'dataService', function ($scope, $rootScope, dataService) {
   $rootScope.dark = false;
   $scope.heatmap = false;
   $scope.poll = function() {
-    $scope.heatmap = !$scope.heatmap;
-    if ( $scope.heatmap ) {
-      toastr.warning('Potential increase in traffic.')
-    } else {
-      toastr.clear();
-    }
+    $scope.$apply(function() {
+      $scope.heatmap = !$scope.heatmap;
+      if ( $scope.heatmap ) {
+        toastr.warning('Potential increase in traffic.')
+      } else {
+        toastr.clear();
+      }
+    })
+
     setTimeout($scope.poll, 10000);
 
     return; //Everything below this line was to poll the server for the presentation

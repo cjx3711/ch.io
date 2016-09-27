@@ -3,7 +3,7 @@ app.controller('aboutController', ['$scope', '$rootScope', 'dataService', functi
     {
       name: "Jia Xun",
       role: "Operations",
-      description: "Cool description of member",
+      description: "Tinkerer, easily distrac..",
       github: "https://github.com/cjx3711",
       linkedin: "https://www.linkedin.com/in/chaijiaxun"
     },
@@ -18,7 +18,6 @@ app.controller('aboutController', ['$scope', '$rootScope', 'dataService', functi
       name: "Grace",
       role: "Design",
       description: "Cool description of member",
-      github: "https://github.com/",
       linkedin: "https://www.linkedin.com/"
     },
     {

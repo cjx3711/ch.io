@@ -17,7 +17,7 @@ app.controller('aboutController', ['$scope', '$rootScope', 'dataService', functi
     {
       name: "Grace",
       role: "Design",
-      description: "Nerdy movie nerd"
+      description: "Nerdy movie nerd",
       linkedin: "https://sg.linkedin.com/in/gracenglc"
     },
     {

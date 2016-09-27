@@ -4,10 +4,10 @@
     This simple webapp was a proof of concept created for the <a href="http://airportofthefuture.bemyapp.com/">Airport of the Future Hackathon</a> organised by Changi Airport Group in 2016.
   </p>
   <h2>Team members</h2>
-    <div ng-repeat="member in members" class="col-lg-4 col-md-4 col-sm-4">
+    <div ng-repeat="member in members" style="height:200px" class="col-lg-4 col-md-4 col-sm-4">
       <h4>{{member.name}}</h4>
       <h5 class="ctitle">{{member.role | uppercase}}</h5>
-      <p>{{member.description}}</p>
+      <p style="height:50px">{{member.description}}</p>
       <a ng-if="member.github" href="{{member.github}}" class="btn btn-social-icon btn-github">
          <span class="fa fa-github"></span>
        </a>

@@ -1,6 +1,16 @@
 app.controller('opsController', ['$scope', 'dataService', function ($scope, dataService) {
+  $rootScope.dark = false;
   $scope.heatmap = false;
   $scope.poll = function() {
+    $scope.heatmap = !$scope.heatmap;
+    if ( $scope.heatmap ) {
+      toastr.warning('Potential increase in traffic.')
+    } else {
+      toastr.clear();
+    }
+    setTimeout($scope.poll, 10000);
+
+    return; //Everything below this line was to poll the server for the presentation
       dataService.getHeatmapData().then(
         function successCallback(response) {
           if ( response.data.b1 == "0" ) {
@@ -16,9 +26,9 @@ app.controller('opsController', ['$scope', 'dataService', function ($scope, data
           console.log("Server error", response);
         }
       );
-      setTimeout($scope.poll, 2000);
+
   }
-  $scope.poll();
+  setTimeout($scope.poll, 2000);
 
   toastr.options = {
     "closeButton": true,

@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>About</h1>
+  <p>
+    This simple webapp was a proof of concept created for the <a href="http://airportofthefuture.bemyapp.com/">Airport of the Future Hackathon</a> organised by Changi Airport Group in 2016.
+  </p>
+  <h2>Team members</h2>
+    <div ng-repeat="user in members" class="col-lg-4 col-md-4 col-sm-4">
+      <h4>{{user.name}}</h4>
+      <h5 class="ctitle">{{user.role | uppercase}}</h5>
+      <p>{{user.description}}</p>
+      <a href="{{user.github}}" class="btn btn-social-icon btn-github">
+         <span class="fa fa-github"></span>
+       </a>
+      <a href="{{user.linkedin}}" class="btn btn-social-icon btn-linkedin">
+         <span class="fa fa-linkedin"></span>
+       </a>
+       <div class="hline" style="margin:20px 0;"></div>
+    </div><!-- /col-lg-4 -->
+
+ </div>
+</div>

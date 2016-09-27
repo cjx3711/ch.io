@@ -8,21 +8,17 @@ app.config( function($routeProvider) {
       templateUrl : "templates/directory.html",
       controller: "directoryController"
   })
-  $routeProvider.when("/map", {
-      templateUrl : "templates/map.html",
-      controller: "mapController"
-  })
   $routeProvider.when("/ops", {
       templateUrl : "templates/ops.html",
       controller: "opsController"
   })
-  $routeProvider.when("/dev", {
-      templateUrl : "templates/dev.html",
-      controller: "devController"
-  })
   $routeProvider.when("/itinerary", {
       templateUrl : "templates/itinerary.html",
       controller: "itineraryController"
+  })
+  $routeProvider.when("/about", {
+      templateUrl : "templates/about.html",
+      controller: "aboutController"
   })
 });
 

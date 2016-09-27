@@ -2,17 +2,17 @@ app.controller('aboutController', ['$scope', '$rootScope', 'dataService', functi
   $scope.members = [
     {
       name: "Jia Xun",
-      role: "Operations",
-      description: "Cool description of member",
+      role: "DevOps",
+      description: "Tinkerer, easily distrac..",
       github: "https://github.com/cjx3711",
       linkedin: "https://www.linkedin.com/in/chaijiaxun"
     },
     {
       name: "Justin",
       role: "Frontend",
-      description: "Cool description of member",
-      github: "https://github.com/",
-      linkedin: "https://www.linkedin.com/"
+      description: "That logo isn't symmetrical.",
+      github: "https://github.com/yzxj",
+      linkedin: "https://www.linkedin.com/yzxj"
     },
     {
       name: "Grace",

@@ -10,15 +10,15 @@ app.controller('aboutController', ['$scope', '$rootScope', 'dataService', functi
     {
       name: "Justin",
       role: "Frontend",
-      description: "That logo isn't symmetrical.",
+      description: "I'd name my cat Time. And hope it's a really slow cat.",
       github: "https://github.com/yzxj",
       linkedin: "https://www.linkedin.com/justyzx"
     },
     {
       name: "Grace",
       role: "Design",
-      description: "Cool description of member",
-      linkedin: "https://www.linkedin.com/"
+      description: "Nerdy movie nerd"
+      linkedin: "https://sg.linkedin.com/in/gracenglc"
     },
     {
       name: "Mervyn",
@@ -30,9 +30,9 @@ app.controller('aboutController', ['$scope', '$rootScope', 'dataService', functi
     {
       name: "Yao Xiang",
       role: "Backend",
-      description: "Cool description of member",
-      github: "https://github.com/",
-      linkedin: "https://www.linkedin.com/"
+      description: "Ty Parsec",
+      github: "https://github.com/yaoxiangg",
+      linkedin: "https://www.linkedin.com/in/teryaoxiang"
     },
     {
       name: "Haritha",

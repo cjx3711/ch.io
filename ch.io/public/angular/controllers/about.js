@@ -12,7 +12,7 @@ app.controller('aboutController', ['$scope', '$rootScope', 'dataService', functi
       role: "Frontend",
       description: "That logo isn't symmetrical.",
       github: "https://github.com/yzxj",
-      linkedin: "https://www.linkedin.com/yzxj"
+      linkedin: "https://www.linkedin.com/justyzx"
     },
     {
       name: "Grace",
